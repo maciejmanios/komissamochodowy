@@ -9,7 +9,7 @@ public class Main {
 
     private static Scanner scanner = new Scanner(System.in);
     public static List<Car> cars = new ArrayList<Car>();
-    //private static Addcar addcar = new Addcar();
+    private static Addcar addcar = new Addcar();
 
     public static void main(String[] args) {
         int end = 0;
@@ -22,7 +22,7 @@ public class Main {
             end=scanner.nextInt();
             switch (end) {
                 case 1: {
-                    addcar.addcar();
+                    addcar.addCar();
                 }
                 case 2: //wyswietlanie listy
                 case 3: // usuwanie

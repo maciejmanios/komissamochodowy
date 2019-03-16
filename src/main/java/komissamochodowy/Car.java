@@ -6,16 +6,19 @@ import java.math.BigDecimal;
 public class Car {
 
     private BigDecimal price;
-    private String color;
+    private String colour;
     private String model;
-    private BigDecimal dors;
-    private BigDecimal mileage;
+    private int doors;
+    private int mileage;
 
-    public Car(BigDecimal price, String color, String model, BigDecimal dors, BigDecimal mileage) {
+    public Car() {
+    }
+
+    public Car(BigDecimal price, String colour, String model, int doors, int mileage) {
         this.price = price;
-        this.color = color;
+        this.colour = colour;
         this.model = model;
-        this.dors = dors;
+        this.doors = doors;
         this.mileage = mileage;
     }
 
@@ -27,12 +30,12 @@ public class Car {
         this.price = price;
     }
 
-    public String getColor() {
-        return color;
+    public String getColour() {
+        return colour;
     }
 
-    public void setColor(String color) {
-        this.color = color;
+    public void setColour(String colour) {
+        this.colour = colour;
     }
 
     public String getModel() {
@@ -43,19 +46,30 @@ public class Car {
         this.model = model;
     }
 
-    public BigDecimal getDors() {
-        return dors;
+    public int getDoors() {
+        return doors;
     }
 
-    public void setDors(BigDecimal dors) {
-        this.dors = dors;
+    public void setDoors(int doors) {
+        this.doors = doors;
     }
 
-    public BigDecimal getMileage() {
+    public int getMileage() {
         return mileage;
     }
 
-    public void setMileage(BigDecimal mileage) {
+    public void setMileage(int mileage) {
         this.mileage = mileage;
+    }
+
+    @Override
+    public String toString() {
+        return "Car{" +
+                "price=" + price +
+                ", colour='" + colour + '\'' +
+                ", model='" + model + '\'' +
+                ", doors=" + doors +
+                ", mileage=" + mileage +
+                '}';
     }
 }
